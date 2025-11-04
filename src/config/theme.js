@@ -42,6 +42,50 @@
   info: '#3b82f6',
 };
 */
+// Modern & Corporate Theme for Nival Cloud Solutions
+export const theme = {
+  primary: {
+    50: '#f2f7ff',
+    100: '#e0efff',
+    200: '#bddbfe',
+    300: '#8bbffe',
+    400: '#58a3fa',
+    500: '#2563eb', // Main brand blue – modern & tech-oriented
+    600: '#1e4fd6',
+    700: '#1c44b8',
+    800: '#1a3a96',
+    900: '#172b6d',
+  },
+  secondary: {
+    50: '#f8fafc',
+    100: '#f1f5f9',
+    200: '#e2e8f0',
+    300: '#cbd5e1',
+    400: '#94a3b8',
+    500: '#475569', // Modern slate-gray for text & backgrounds
+    600: '#334155',
+    700: '#1e293b',
+    800: '#0f172a',
+    900: '#0a0f1f',
+  },
+  accent: {
+    50: '#ecfeff',
+    100: '#cffafe',
+    200: '#a5f3fc',
+    300: '#67e8f9',
+    400: '#22d3ee',
+    500: '#06b6d4', // Aqua accent – energetic & innovative
+    600: '#0891b2',
+    700: '#0e7490',
+    800: '#155e75',
+    900: '#164e63',
+  },
+  success: '#22c55e', // Balanced green for success states
+  error: '#ef4444',   // Clear red for errors
+  warning: '#facc15', // Noticeable but soft yellow
+  info: '#0ea5e9',    // Light tech blue for information elements
+};
+/*
 // Elegant & Professional Theme for Nival Cloud Solutions
 export const theme = {
   primary: {
@@ -85,6 +129,7 @@ export const theme = {
   warning: '#eab308', // Warm but controlled yellow
   info: '#2563eb',    // Deep tech blue for informational elements
 };
+*/
 
 // Helper function to get CSS variables
 export const getThemeCSS = () => {

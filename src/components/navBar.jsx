@@ -8,10 +8,10 @@ function NavBar() {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="bg-gray-900 text-gray-100 shadow-lg sticky top-0 z-50">
+    <nav role="navigation" aria-label="Main navigation" className="bg-gray-900 text-gray-100 shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="flex-shrink-0 text-xl font-bold tracking-tight text-blue-400 hover:text-blue-300 transition">
+          <Link to="/" title="Nival Cloud Solutions - Home" className="flex-shrink-0 text-xl font-bold tracking-tight text-blue-400 hover:text-blue-300 transition">
             Nival Cloud Solutions
           </Link>
           <ul className="hidden md:flex space-x-8 text-sm font-medium">
@@ -46,6 +46,11 @@ function NavBar() {
               </Link>
             </li>
             <li>
+              <Link to="/business" className={`hover:text-blue-400 transition ${isActive('/business') ? 'text-blue-400' : ''}`}>
+                Business
+              </Link>
+            </li>
+            <li>
               <Link to="/forsale" className={`hover:text-blue-400 transition ${isActive('/forsale') ? 'text-blue-400' : ''}`}>
                 For Sale
               </Link>
@@ -54,6 +59,8 @@ function NavBar() {
           <div className="md:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-expanded={mobileMenuOpen}
+              aria-label="Toggle navigation menu"
               className="text-gray-100 hover:text-blue-400 focus:outline-none"
             >
               <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -97,6 +104,11 @@ function NavBar() {
               <li>
                 <Link to="/contact" className="block hover:text-blue-400 transition" onClick={() => setMobileMenuOpen(false)}>
                   Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/business" className="block hover:text-blue-400 transition" onClick={() => setMobileMenuOpen(false)}>
+                  Business
                 </Link>
               </li>
               <li>

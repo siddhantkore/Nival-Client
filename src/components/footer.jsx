@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import BusinessForm from "./businessForm";
+import BusinessForm from "../pages/Business/Business";
 
 function Footer() {
     const [email, setEmail] = useState("");

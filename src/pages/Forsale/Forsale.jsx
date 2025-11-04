@@ -3,7 +3,7 @@ import { Mail } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 export default function WebsiteForSale() {
-  const saleEmail = 'sales@nivalcloud.com' // change to your contact email
+  const saleEmail = 'megastorage2112@nivalcloud.com'
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 p-6">

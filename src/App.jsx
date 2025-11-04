@@ -13,6 +13,8 @@ import Careers from './pages/Careers/Careers';
 import Dashboard from './pages/Admin/Dashboard';
 import NotFound from './pages/NotFound/NotFound';
 import UnderDevelopment from './pages/UnderDevelopment/UnderDevelopment';
+import WebsiteForSale from './pages/Forsale/Forsale';
+import BusinessPage from './pages/Business/Business';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
         <Route path="/blogs/:id" element={<BlogDetails />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/business" element={<BusinessPage />} />
+        <Route path="/forsale" element={<WebsiteForSale />} />
         <Route path="/under-development" element={<UnderDevelopment />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

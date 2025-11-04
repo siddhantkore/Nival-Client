@@ -4,9 +4,9 @@
 
 /* Configurable color palette - can be customized */
 :root {
-  --color-primary: #2563eb;
+  --color-primary: #0cb8ec;
   --color-primary-light: #3b82f6;
-  --color-primary-dark: #1d4ed8;
+  --color-primary-dark: #18a3ee;
   --color-secondary: #64748b;
   --color-accent: #d946ef;
   --color-success: #10b981;
