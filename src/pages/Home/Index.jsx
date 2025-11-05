@@ -29,6 +29,7 @@ function HomePage() {
         setBlogs(loadedBlogs.slice(0, 3));
         const whyChooseUsContent = loadedContent.find(item => item.slug === 'why-choose-us');
         setWhyChooseUs(whyChooseUsContent);
+        console.log("Loaded content:", whyChooseUsContent);
       } catch (error) {
         console.error("Error loading content:", error);
       }
