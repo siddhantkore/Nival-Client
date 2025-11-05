@@ -15,6 +15,8 @@ import NotFound from './pages/NotFound/NotFound';
 import UnderDevelopment from './pages/UnderDevelopment/UnderDevelopment';
 import WebsiteForSale from './pages/Forsale/Forsale';
 import BusinessPage from './pages/Business/Business';
+import Explore from './pages/Explore/Explore';
+import AwsPricePredictor from './pages/Explore/AwsPricePrediction/AwsPricePredictor';
 
 function App() {
   return (
@@ -30,7 +32,10 @@ function App() {
         <Route path="/blogs/:id" element={<BlogDetails />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/contact" element={<ContactUs />} />
-        <Route path="/business" element={<BusinessPage />} />
+  {/* Business kept as route for backward compatibility, navbar triggers modal version */}
+  <Route path="/business" element={<BusinessPage />} />
+  <Route path="/explore" element={<Explore />} />
+  <Route path="/explore/aws-price-predictor" element={<AwsPricePredictor />} />
         <Route path="/forsale" element={<WebsiteForSale />} />
         <Route path="/under-development" element={<UnderDevelopment />} />
         <Route path="*" element={<NotFound />} />

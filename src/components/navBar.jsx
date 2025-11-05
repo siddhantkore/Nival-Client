@@ -1,11 +1,18 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import BusinessForm from "./businessForm";
 
 function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
-  const isActive = (path) => location.pathname === path;
+  const isActive = (path) => {
+    // root exact match, other paths match prefix so subroutes stay active
+    if (path === '/') return location.pathname === '/';
+    return location.pathname.startsWith(path);
+  };
+
+  const [showBusinessModal, setShowBusinessModal] = useState(false);
 
   return (
     <nav role="navigation" aria-label="Main navigation" className="bg-gray-900 text-gray-100 shadow-lg sticky top-0 z-50">
@@ -40,15 +47,24 @@ function NavBar() {
                 Careers
               </Link>
             </li>
+            <li className="relative group">
+              <Link to="/explore" className={`hover:text-blue-400 transition ${isActive('/explore') ? 'text-blue-400' : ''}`}>
+                Explore
+              </Link>
+              <div className="absolute left-0 mt-2 w-56 bg-white text-gray-800 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 hidden group-hover:block z-50">
+                <Link to="/explore/aws-price-predictor" className="block px-4 py-2 text-sm hover:bg-gray-100" >AWS Price Predictor</Link>
+              </div>
+            </li>
+
             <li>
               <Link to="/contact" className={`hover:text-blue-400 transition ${isActive('/contact') ? 'text-blue-400' : ''}`}>
                 Contact Us
               </Link>
             </li>
             <li>
-              <Link to="/business" className={`hover:text-blue-400 transition ${isActive('/business') ? 'text-blue-400' : ''}`}>
+              <button onClick={() => setShowBusinessModal(true)} className="hover:text-blue-400 transition text-left">
                 Business
-              </Link>
+              </button>
             </li>
             <li>
               <Link to="/forsale" className={`hover:text-blue-400 transition ${isActive('/forsale') ? 'text-blue-400' : ''}`}>
@@ -102,14 +118,24 @@ function NavBar() {
                 </Link>
               </li>
               <li>
+                <Link to="/explore" className="block hover:text-blue-400 transition" onClick={() => setMobileMenuOpen(false)}>
+                  Explore
+                </Link>
+              </li>
+              <li className="pl-4">
+                <Link to="/explore/aws-price-predictor" className="block hover:text-blue-400 transition" onClick={() => setMobileMenuOpen(false)}>
+                  • AWS Price Predictor
+                </Link>
+              </li>
+              <li>
                 <Link to="/contact" className="block hover:text-blue-400 transition" onClick={() => setMobileMenuOpen(false)}>
                   Contact Us
                 </Link>
               </li>
               <li>
-                <Link to="/business" className="block hover:text-blue-400 transition" onClick={() => setMobileMenuOpen(false)}>
+                <button onClick={() => { setShowBusinessModal(true); setMobileMenuOpen(false); }} className="block w-full text-left hover:text-blue-400 transition">
                   Business
-                </Link>
+                </button>
               </li>
               <li>
                 <Link to="/forsale" className="block hover:text-blue-400 transition" onClick={() => setMobileMenuOpen(false)}>
@@ -118,6 +144,9 @@ function NavBar() {
               </li>
             </ul>
           </div>
+        )}
+        {showBusinessModal && (
+          <BusinessForm onClose={() => setShowBusinessModal(false)} />
         )}
       </div>
     </nav>

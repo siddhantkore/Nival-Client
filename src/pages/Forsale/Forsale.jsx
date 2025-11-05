@@ -20,7 +20,7 @@ export default function WebsiteForSale() {
 
         <a
           href={`mailto:${saleEmail}`}
-          className="mt-8 inline-flex items-center justify-center gap-2 bg-indigo-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-indigo-700 transition"
+          className="mt-8 inline-flex items-center justify-center gap-2 bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-indigo-700 transition"
         >
           <Mail size={18} /> Contact Us
         </a>

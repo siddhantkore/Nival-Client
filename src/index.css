@@ -1,5 +1,9 @@
 @tailwind base;
 @tailwind components;
+/* The @tailwind at-rules are processed by PostCSS/Tailwind.
+  If your editor flags "Unknown at rule @tailwind", enable the
+  Tailwind CSS IntelliSense extension or disable built-in CSS
+  validation in your editor (e.g. "css.validate": false). */
 @tailwind utilities;
 
 /* Configurable color palette - can be customized */
