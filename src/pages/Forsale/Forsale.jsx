@@ -1,13 +1,13 @@
 import React from 'react'
 import { Mail } from 'lucide-react'
-import { motion } from 'framer-motion'
+import { motion as Motion } from 'framer-motion'
 
 export default function WebsiteForSale() {
   const saleEmail = 'megastorage2112@nivalcloud.com'
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 p-6">
-      <motion.div
+      <Motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -24,7 +24,7 @@ export default function WebsiteForSale() {
         >
           <Mail size={18} /> Contact Us
         </a>
-      </motion.div>
+      </Motion.div>
     </div>
   )
 }

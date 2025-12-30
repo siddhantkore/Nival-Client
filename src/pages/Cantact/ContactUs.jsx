@@ -42,6 +42,7 @@ function ContactUs() {
         setMessage({ type: "error", text: data.message || "Something went wrong. Please try again." });
       }
     } catch (error) {
+      console.error("Error sending contact message:", error);
       setMessage({ type: "error", text: "Failed to send message. Please try again later." });
     } finally {
       setLoading(false);

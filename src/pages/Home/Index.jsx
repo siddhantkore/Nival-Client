@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 import NavBar from "../../components/navBar";
 import Footer from "../../components/footer";
 import { loadMDXFiles } from "../../utils/loadMDX";

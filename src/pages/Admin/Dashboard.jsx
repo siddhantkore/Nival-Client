@@ -189,6 +189,7 @@ function JobsTab({ jobs, onDelete, onRefresh }) {
         onRefresh();
       }
     } catch (error) {
+      console.error("Error creating job:", error);
       alert("Failed to create job");
     }
   };

@@ -51,6 +51,7 @@ function JobApplicationForm({ jobId, onClose }) {
         setMessage({ type: "error", text: data.message || "Failed to submit application" });
       }
     } catch (error) {
+      console.error("Error submitting application:", error);
       setMessage({ type: "error", text: "Failed to submit application. Please try again." });
     } finally {
       setLoading(false);
