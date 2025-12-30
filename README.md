@@ -2,6 +2,8 @@
 
 A professional, production-ready frontend for Nival Cloud Solutions. Built with React, Vite, Tailwind CSS and MDX for content-driven pages.
 
+### SEE ALSO: [Nival Cloud Solutions - Server](https://github.com/siddhantkore/Nival-Server)
+
 ---
 
 ## Table of contents
@@ -110,5 +112,3 @@ Contributions are welcome. Please open a concise, focused pull request and inclu
 See the `LICENSE` file for license details (if present). For questions or support, reach out to the project maintainer.
 
 ---
-
-Last updated: 30 December 2025
